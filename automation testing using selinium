@@ -1,0 +1,209 @@
+Selinium
+------------
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Demo {
+	public static void main(String [] args)
+	{
+		// selenium code
+		// create driver object for chrome browser
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Suchit\\Documents\\Selenium Project\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://google.com");
+		System.out.println(driver.getTitle());
+		
+	}
+
+-----------------------------------------------------------------
+2nd 
+-----
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Demo {
+	public static void main(String [] args)
+	{
+		// selenium code
+		// create driver object for chrome browser
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Suchit\\Documents\\Selenium Project\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://google.com"); // hit url of the browser
+		System.out.println(driver.getTitle()); //validate if your page title is correct or not
+		System.out.println(driver.getCurrentUrl()); // validate the page url is correct or not
+		//System.out.println(driver.getPageSource()); // print page source
+		driver.get("https://www.flipkart.com");
+		driver.navigate().back();
+	}
+
+}
+-----------------------------------------------------------------------------------------
+3rd
+-----
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Demo {
+	public static void main(String [] args)
+	{
+		// selenium code
+		// create driver object for chrome browser
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Suchit\\Documents\\Selenium Project\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://google.com"); // hit url of the browser
+		System.out.println(driver.getTitle()); //validate if your page title is correct or not
+		System.out.println(driver.getCurrentUrl()); // validate the page url is correct or not
+		//System.out.println(driver.getPageSource()); // print page source
+		driver.get("https://www.flipkart.com");
+		driver.navigate().back();
+		driver.navigate().forward();
+		driver.close();
+		//driver.quit();
+	}
+
+}
+----------------------------------------------------------------------------------
+4th 
+-----
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Demo {
+	public static void main(String [] args)
+	{
+		// selenium code
+		// create driver object for chrome browser
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Suchit\\Documents\\Selenium Project\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://google.com"); // hit url of the browser
+		System.out.println(driver.getTitle()); //validate if your page title is correct or not
+		System.out.println(driver.getCurrentUrl()); // validate the page url is correct or not
+		//System.out.println(driver.getPageSource()); // print page source
+		driver.get("https://www.facebook.com/");
+		driver.findElement(By.id("email")).sendKeys("ranjeetkr369@gmail.com");
+	}
+
+}
+-------------------------------------
+5th
+----
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Demo {
+	public static void main(String [] args)
+	{
+		// selenium code
+		// create driver object for chrome browser
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Suchit\\Documents\\Selenium Project\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://google.com"); // hit url of the browser
+		System.out.println(driver.getTitle()); //validate if your page title is correct or not
+		System.out.println(driver.getCurrentUrl()); // validate the page url is correct or not
+		//System.out.println(driver.getPageSource()); // print page source
+		driver.get("https://www.facebook.com/");
+		driver.findElement(By.id("email")).sendKeys("ranjeetkr369@gmail.com");
+		driver.findElement(By.name("pass")).sendKeys("Ranjeet@97");
+		driver.findElement(By.linkText("Forgotten account?")).click();
+	}
+
+}
+------------------------------------------------------------------------------------------------
+6th
+---
+/* css path and xpath */
+----------------------------
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Testing {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Suchit\\Documents\\Selenium Project\\chromedriver.exe");
+		WebDriver drive = new ChromeDriver();
+		drive.get("https://www.facebook.com/");
+	//	drive.findElement(By.className("inputtext login_form_input_box")).sendKeys("ranjeetkr369");
+    //  drive.findElement(By.className("inputtext login_form_input_box")).sendKeys("12345");
+		drive.findElement(By.cssSelector("#email")).sendKeys("ranjeetkr715");
+		drive.findElement(By.xpath("//*[@id=\'pass\']")).sendKeys("Ranjeet@97");
+
+	}
+
+}
+----------------------------------------------------------------------------------------------------------
+7th 
+-----
+/* using of css path and xpath */
+---------------------------------
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Testing {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Suchit\\Documents\\Selenium Project\\chromedriver.exe");
+		WebDriver drive = new ChromeDriver();
+		drive.get("https://www.facebook.com/");
+	//	drive.findElement(By.className("inputtext login_form_input_box")).sendKeys("ranjeetkr369");
+    //  drive.findElement(By.className("inputtext login_form_input_box")).sendKeys("12345");
+		drive.findElement(By.cssSelector("#email")).sendKeys("ranjeetkr715");
+		drive.findElement(By.xpath("//*[@id=\'pass\']")).sendKeys("Ranjeet@97");
+		drive.findElement(By.xpath("//*[@id=\'login_form\']/table/tbody/tr[3]/td[2]/div/a")).click();
+
+	}
+
+}
+------------------------------------------------------------------------------------------------------------
+8th
+------
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Testing {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Suchit\\Documents\\Selenium Project\\chromedriver.exe");
+		WebDriver drive = new ChromeDriver();
+		drive.get("https://www.facebook.com/");
+	//	drive.findElement(By.className("inputtext login_form_input_box")).sendKeys("ranjeetkr369");
+    //  drive.findElement(By.className("inputtext login_form_input_box")).sendKeys("12345");
+		drive.findElement(By.cssSelector("#email")).sendKeys("ranjeetkr715");
+		drive.findElement(By.xpath("//*[@id=\'pass\']")).sendKeys("Ranjeet@97");
+		drive.findElement(By.xpath("//*[@id=\'login_form\']/table/tbody/tr[3]/td[2]/div/a")).click();
+    }
+}
+----------------------------------------------------------------------------------------
+9th
+-----
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Practise {
+public static void main(String [] args)
+{
+	System.setProperty("webdriver.chrome.driver","C:\\Users\\Suchit\\Documents\\Selenium Project\\chromedriver.exe");
+    WebDriver drives = new ChromeDriver();
+    drives.get("https://www.rediff.com/");
+    drives.findElement(By.xpath("//*[@id=\'signin_info\']/a[1]")).click();
+    drives.findElement(By.id("login1")).sendKeys("ranjeetkr369");
+    drives.findElement(By.id("password")).sendKeys("Shael@7059");
+    drives.findElement(By.name("proceed")).click();
+}
+}
+---------------------------------------------------------------------------------------
+10th
+======
